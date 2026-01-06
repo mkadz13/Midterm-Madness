@@ -1,0 +1,103 @@
+----CS2212A Group Project - "Midterm Madness"----
+
+Midterm Madness is a small text-based, point-and-click adventure game, where you hazily wake up after a long night of partying. After realizing that you're running late to your midterm exam, and your personal belongings are missing, you explore the trashed house and maneuver the characters and obstacles you encounter on the way, all while hoping you can retrieve your things before time runs out. 
+
+
+~~~~~~Features~~~~~~
+
+The game has an interactable UI built with JavaFX, with the JSON-based world data being loaded using GSON. The gameplay includes an inventory system along with items with specific requirements, traversable and/or conditionally locked locations, and contextual win conditions. The application was made to be dynamic with the JSON data provided, allowing for new stories, environments, characters, items, etc, to be experienced through the same app.
+
+**when traversing the world, hover your cursor over the arrows to see the potential destination's name before clicking
+
+~~~~~Functionality~~~~~
+
+
+1. GUI built with the JavaFX framework
+
+JavaFX is needed for this application, with the version we ran being JavaFX v25.0.1. Depending on the IDE used during development, there are known bugs where the JavaFX version does not properly match the IDE and its' FX installations, certain Java versions do not work, or FXML  files do not behave properly.
+
+**In order to download the correct JavaFX, you must check your Java version, IDE and its version, and install the right versions which work together, which can be a hassle. Depending on versions of IDE's or JavaFX, libraries may be needed to be added to the projects module path, and sometimes class path.
+
+-Link for JavaFX downloads, where you can pick your version: https://gluonhq.com/products/javafx/
+
+-Link for download tutorial for Eclipse: https://youtu.be/nz8P528uGjk?si=HkwUsA7DsR7db2nr 
+-Link for download tutorial for IntelliJ: https://youtu.be/Ope4icw6bVk?si=p09CSmp0Qf2qwQEg
+
+
+JavaFX Scene Builder, a visual layout tool that allows for easier construction of GUI's was used for this application, using FXML files to store the automatically generated code, defining elements of the UI. 
+
+
+2. Gson used for parsing JSON world data
+
+Google's Gson was used to parse and convert our JSON string data into Java objects. Gson version gson-2.10.1 was used. As with JavaFX, downloading and installing can vary in difficulty depending on the gson version, IDE and its version, etc, so compatibility should be checked before download.
+
+**When changing JSON world data, it must be in the correct path to be found and read.
+
+
+
+
+Possible example to run jar file with vm commands: java --module-path "C:\Users\YourNameHere\Desktop\javafx-sdk-25.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base -jar MidtermMadness.jar
+
+
+CS2212 Project Directory Structure
+
+├─ src
+│   ├─ Main
+│   │ └─ Main.java
+│   │
+│   ├─ Main.data
+│   │ └─ JsonWorldLoader.java
+│   │
+│   ├─ Main.GameEngine
+│   │ ├─ CommandResult.java
+│   │ ├─ GameEngine.java
+│   │ └─ GameState.java
+│   │
+│   ├─ Main.model
+│   │ ├─ Connection.java
+│   │ ├─ FixedObject.java
+│   │ ├─ GameObject.java
+│   │ ├─ GiveRule.java
+│   │ ├─ Inventory.java
+│   │ ├─ Item.java
+│   │ ├─ Location.java
+│   │ ├─ NPC.java
+│   │ ├─ UseRule.java
+│   │ └─ World.java
+│   │
+│   └─ Main.ui
+│     ├─ GameUI.java
+│     ├─ MenuUI.java
+│     ├─ GameUI.fxml
+│     └─ MenuUI.fxml
+│
+└─ resources
+    ├─ games
+    │    └─ midterm_madness.json
+    │
+    └─ images
+        ├─ alcohol.png
+        ├─ attic.jpg
+        ├─ basement.jpg
+        ├─ bathroom.png
+        ├─ bedroom.png
+        ├─ bedroom2.jpg
+        .
+        .
+        .
+
+
+
+
+Developed by : Arthur Niderla, Mohammed Kadri, Terence, and Makaato
+
+
+
+
+
+
+
+
+
+
+

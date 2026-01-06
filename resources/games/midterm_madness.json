@@ -1,0 +1,252 @@
+{
+  "startLocation": "Bedroom",
+  "endLocations": ["The Real World"],
+  "turnLimit": 50,
+  "inventoryItems": [
+    {
+      "name": "Wallet",
+      "description": "Your wallet with ID and credit cards. Everything seems to be here.",
+      "imagePath": "/images/wallet.png",
+      "attributes": [],
+      "containedObjects": [],
+      "pickable": true,
+      "selectable": true,
+      "examinable": true
+    },
+    {
+      "name": "Car Keys",
+      "description": "Your car keys. Thank goodness!",
+      "imagePath": "/images/keys.png",
+      "attributes": [],
+      "containedObjects": [],
+      "pickable": true,
+      "selectable": true,
+      "examinable": true
+    }
+  ],
+  "locations": [
+    {
+      "name": "Bedroom",
+      "description": "Where you woke up with a terrible headache. How did you even end up here...",
+      "imagePath": "/images/Bedroom.png",
+      "accessible": true,
+      "requiredItems": [],
+      "requiredInv": [],
+      "connections": [
+        { "label": "Living Room", "targetLocation": "Living Room" }
+      ],
+      "objects": [
+        {
+          "name": "Neverclear Alcohol",
+          "description": "A bottle of grain alcohol, a little on the strong side...",
+          "imagePath": "/images/alcohol.png",
+          "attributes": ["tradeable", "startItem"],
+          "containedObjects": [],
+          "pickable": true,
+          "selectable": true,
+          "examinable": true
+        }
+      ],
+      "characters": []
+    },
+    {
+      "name": "Living Room",
+      "description": "A messy living room with party remnants and unconscious people strewn about.",
+      "imagePath": "/images/livingroom.png",
+      "accessible": true,
+      "requiredItems": [],
+      "requiredInv": [],
+      "connections": [
+        { "label": "Bedroom", "targetLocation": "Bedroom" },
+        { "label": "Kitchen", "targetLocation": "Kitchen" },
+        { "label": "Attic", "targetLocation": "Attic" },
+        { "label": "Outside", "targetLocation": "The Real World" }
+      ],
+      "objects": [],
+      "characters": [
+        {
+          "name": "Pauline",
+          "description": "In the midst of a week-long bender that shows no sign of stopping.",
+          "imagePath": "/images/pauline.png",
+          "phrases": [
+            "The sun rising just means that the night is extra young. My liver yearns for a true challenge! Perhaps you could help with that?",
+            "Thanks! I'll put this to good use. Oh, by the way, is this your wallet? I picked it up from the floor last night and the picture on the driver's license kind of looks like you."
+          ],
+          "wantedObjects": ["Neverclear Alcohol"],
+          "givenItems": ["Wallet"]
+        }
+      ]
+    },
+    {
+      "name": "Kitchen",
+      "description": "A kitchen with various supplies and a conspicuous looking man lying on the counter.",
+      "imagePath": "/images/kitchen.png",
+      "accessible": true,
+      "requiredItems": [],
+      "requiredInv": [],
+      "connections": [
+        { "label": "Living Room", "targetLocation": "Living Room" },
+        { "label": "Basement", "targetLocation": "Basement" },
+        { "label": "Upstairs Bedroom", "targetLocation": "Upstairs Bedroom" }
+      ],
+      "objects": [
+        {
+          "name": "Cat Food",
+          "description": "Dry cat food that could distract an angry cat.",
+          "imagePath": "/images/catfood1.png",
+          "attributes": ["tradeable"],
+          "containedObjects": [],
+          "pickable": true,
+          "selectable": true,
+          "examinable": true
+        }
+      ],
+      "characters": [
+        {
+          "name": "Dutch van der Linde",
+          "description": "Severely hungover on the kitchen counter.",
+          "imagePath": "/images/dutch.png",
+          "phrases": [
+            "*groans* I had a plan Arthur... a goddamn plan! Why didn't you follow my plan? We needed to make noise... *groan*",
+            "Thank you! You know, you remind me of someone I used to know. His name was Hosea...",
+            "Oh, your phone is missing? Let me call it for you. I think I hear it in the washroom!"
+          ],
+          "wantedObjects": ["Tylenol"]
+        }
+      ]
+    },
+    {
+      "name": "Upstairs Bedroom",
+      "description": "Another bedroom with some useful items and empty beer cans on the floor.",
+      "imagePath": "/images/bedroom2.jpg",
+      "accessible": true,
+      "requiredItems": [],
+      "requiredInv": [],
+      "connections": [
+        { "label": "Kitchen", "targetLocation": "Kitchen" },
+        { "label": "Washroom", "targetLocation": "Washroom" }
+      ],
+      "objects": [
+        {
+          "name": "Bobby Pin",
+          "description": "A thin metal pin that could be used to pick locks.",
+          "imagePath": "/images/bobbypin.png",
+          "attributes": ["thin"],
+          "containedObjects": [],
+          "pickable": true,
+          "selectable": true,
+          "examinable": true
+        },
+        {
+          "name": "Tylenol",
+          "description": "Pain relief medication for headaches of, let's say, various origins.",
+          "imagePath": "/images/tylenol.png",
+          "attributes": ["tradeable"],
+          "containedObjects": [],
+          "pickable": true,
+          "selectable": true,
+          "examinable": true
+        }
+      ],
+      "characters": []
+    },
+    {
+      "name": "Attic",
+      "description": "A dusty attic with old furniture and elegant silk curtains by the window.",
+      "imagePath": "/images/attic.jpg",
+      "accessible": true,
+      "requiredItems": [],
+      "requiredInv": [],
+      "connections": [
+        { "label": "Living Room", "targetLocation": "Living Room" }
+      ],
+      "objects": [
+        {
+          "name": "Scissors",
+          "description": "A sharp pair of scissors.",
+          "imagePath": "/images/scissors.png",
+          "attributes": ["sharp"],
+          "containedObjects": [],
+          "pickable": true,
+          "selectable": true,
+          "examinable": true
+        }
+      ],
+      "characters": [
+        {
+          "name": "Ivanovich",
+          "description": "Tangled in the attic window's curtains.",
+          "imagePath": "/images/ivanovich.png",
+          "phrases": [
+            "Man that damn cat chased me all the way into the attic last night, and somehow I got tangled in these curtains!",
+            "Free at last! Man, I have a horrid headache. If you need something to take for that headache you probably have, I'd check the upstairs bedroom."
+          ],
+          "wantedObjects": ["Scissors"]
+        }
+      ]
+    },
+    {
+      "name": "Basement",
+      "description": "A dark basement that has somehow escaped the worst of the party's chaos.",
+      "imagePath": "/images/basement.jpg",
+      "accessible": true,
+      "requiredItems": [],
+      "requiredInv": [],
+      "connections": [
+        { "label": "Kitchen", "targetLocation": "Kitchen" }
+      ],
+      "objects": [],
+      "characters": [
+        {
+          "name": "Fluffy Princess Sunshine Sparkles",
+          "description": "An angry cat with your car keys.",
+          "imagePath": "/images/cat.png",
+          "phrases": [
+            "*HISS* *SCRATCH* *ROAR* (Wait did this thing just roar?)",
+            "Fluffy drops the keys and runs toward the food! This is your chance!"
+          ],
+          "wantedObjects": ["Cat Food"],
+          "givenItems": ["Car Keys"]
+        }
+      ]
+    },
+    {
+      "name": "Washroom",
+      "description": "A locked washroom. There is some interesting graffiti on it that you swear wasn't there the night before...",
+      "imagePath": "/images/bathroom.png",
+      "accessible": false,
+      "requiredItems": ["Bobby Pin"],
+      "requiredInv": [],
+      "connections": [
+        { "label": "Upstairs Bedroom", "targetLocation": "Upstairs Bedroom" }
+      ],
+      "objects": [
+        {
+          "name": "Phone",
+          "description": "Your smartphone.",
+          "imagePath": "/images/phone.png",
+          "attributes": ["winItem"],
+          "containedObjects": [],
+          "pickable": true,
+          "selectable": true,
+          "examinable": true
+        }
+      ],
+      "characters": []
+    },
+    {
+      "name": "The Real World",
+      "description": "Your escape to the midterm.",
+      "imagePath": "/images/midterm.jpg",
+      "accessible": false,
+      "requiredItems": [],
+      "requiredInv": ["Phone", "Car Keys", "Wallet"],
+      "connections": [
+        { "label": "Living Room", "targetLocation": "Living Room" }
+      ],
+      "objects": [],
+      "characters": []
+    }
+  ]
+}
+
