@@ -1,4 +1,4 @@
-----CS2212A Group Project - "Midterm Madness"----
+----"Midterm Madness"----
 
 Midterm Madness is a small text-based, point-and-click adventure game, where you hazily wake up after a long night of partying. After realizing that you're running late to your midterm exam, and your personal belongings are missing, you explore the trashed house and maneuver the characters and obstacles you encounter on the way, all while hoping you can retrieve your things before time runs out. 
 
@@ -39,7 +39,7 @@ Google's Gson was used to parse and convert our JSON string data into Java objec
 Possible example to run jar file with vm commands: java --module-path "C:\Users\YourNameHere\Desktop\javafx-sdk-25.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base -jar MidtermMadness.jar
 
 
-CS2212 Project Directory Structure
+Directory:
 
 ├─ src
 │   ├─ Main
